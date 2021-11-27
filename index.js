@@ -42,7 +42,6 @@ const server = net.createServer(function (socket) {
                                 db.read().then(function (data) {
                                     broadcast(data);
                                 });
-                                socket.write('1');
                             })
                             .catch(function (err) {
                                 console.error('err: ' + err);
